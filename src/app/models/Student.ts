@@ -1,7 +1,8 @@
 export interface Student {
   id?: any;
-  name: string;
-  class: string;
-  absences: any;
-  admission: boolean;
+  nom: string;
+  prenom: string;
+  classe: string;
+  nbAbsences: any;
+  Reussite: boolean;
 }
