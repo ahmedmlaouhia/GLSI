@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { StudentsService } from '../services/students.service';
+import { Router } from '@angular/router';
+import { Student } from '../models/Student';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-students',
@@ -9,10 +13,10 @@ import { Component } from '@angular/core';
 })
 export class StudentsComponent {
   constructor(
-    private studentService: EtudiantService,
+    private studentService: StudentsService,
     private router: Router
   ) {}
-  userDetails: Etudiant[] = [];
+  userDetails: Student[] = [];
   ngOnInit(): void {
     this.loadUsers();
   }
