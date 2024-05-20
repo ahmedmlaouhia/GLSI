@@ -24,32 +24,6 @@ export const routes: Routes = [
   { path: 'teachers/add', component: AddTeacherComponent },
   { path: 'teachers/edit/:id', component: EditTeacherComponent },
   { path: '**', redirectTo: '' },
-  //   {
-  //     path: 'students',
-  //     component: StudentsComponent,
-  //     children: [
-  //       { path: 'add', component: AddStudentComponent },
-  //       { path: 'edit/:id', component: EditStudentComponent },
-  //     ],
-  //   },
-  //   {
-  //     path: 'administration',
-  //     component: AdministrationComponent,
-  //     children: [
-  //       { path: 'add', component: AddAdministrationComponent },
-  //       { path: 'edit/:id', component: EditAdministrationComponent },
-  //     ],
-  //   },
-  //   {
-  //     path: 'teachers',
-  //     component: TeachersComponent,
-  //     children: [
-  //       { path: 'add', component: AddTeacherComponent },
-  //       { path: 'edit/:id', component: EditTeacherComponent },
-  //     ],
-  //   },
-  //   { path: '**', redirectTo: '' }, // wildcard route for a 404 page (optional)
-  // ];
 ];
 
 @NgModule({

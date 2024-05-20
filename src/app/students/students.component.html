@@ -1,1 +1,59 @@
-<p>students works!</p>
+<button class="btn btn-outline btn-primary">Add Student</button>
+
+<div class="overflow-x-auto">
+  <table class="table">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" class="checkbox" />
+          </label>
+        </th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Admission</th>
+        <th>Abscences</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let user of userDetails">
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" class="checkbox" />
+          </label>
+        </th>
+        <td>
+          <div class="flex items-center gap-3">
+            <div class="avatar">
+              <div class="mask mask-squircle w-12 h-12">
+                <img
+                  src="https://img.daisyui.com/tailwind-css-component-profile-2@56w.png"
+                  alt="Avatar Tailwind CSS Component"
+                />
+              </div>
+            </div>
+            <div>
+              <div class="font-bold">Hart Hagerty</div>
+              <div class="text-sm opacity-50">United States</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          Zemlak, Daniel and Leannon
+          <br />
+          <span class="badge badge-ghost badge-sm"
+            >Desktop Support Technician</span
+          >
+        </td>
+        <td>Purple</td>
+        <th>
+          <button class="btn btn-outline btn-secondary">Delete</button>
+          <button class="btn btn-outline btn-accent">Edit</button>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
