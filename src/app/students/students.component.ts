@@ -3,11 +3,12 @@ import { StudentsService } from '../services/students.service';
 import { Router } from '@angular/router';
 import { Student } from '../models/Student';
 import { HttpErrorResponse } from '@angular/common/http';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-students',
   standalone: true,
-  imports: [],
+  imports: [NgFor],
   templateUrl: './students.component.html',
   styleUrl: './students.component.css',
 })
