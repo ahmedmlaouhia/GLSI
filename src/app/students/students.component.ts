@@ -7,8 +7,6 @@ import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-students',
-  standalone: true,
-  imports: [NgFor],
   templateUrl: './students.component.html',
   styleUrl: './students.component.css',
 })
