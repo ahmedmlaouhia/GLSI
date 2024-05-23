@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StudentsService } from '../services/students.service';
 import { Router } from '@angular/router';
 import { Student } from '../models/Student';
-import { HttpClientModule, HttpErrorResponse } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-students',
@@ -13,15 +12,79 @@ import { CommonModule } from '@angular/common';
 export class StudentsComponent implements OnInit {
   userDetails: Student[] = [];
 
-  constructor(
-    private studentService: StudentsService,
-    public router: Router
-  ) {}
+  constructor(private studentService: StudentsService, public router: Router) {}
+
+  userDetails: Student[] = [
+    {
+      id: 1,
+      nom: 'Doe',
+      prenom: 'John',
+      classe: 'A',
+      nbAbsences: 3,
+      Reussite: true,
+    },
+    {
+      id: 2,
+      nom: 'Smith',
+      prenom: 'Jane',
+      classe: 'B',
+      nbAbsences: 5,
+      Reussite: false,
+    },
+    {
+      id: 3,
+      nom: 'Doe',
+      prenom: 'John',
+      classe: 'A',
+      nbAbsences: 3,
+      Reussite: true,
+    },
+    {
+      id: 4,
+      nom: 'Smith',
+      prenom: 'Jane',
+      classe: 'B',
+      nbAbsences: 5,
+      Reussite: false,
+    },
+    {
+      id: 5,
+      nom: 'Doe',
+      prenom: 'John',
+      classe: 'A',
+      nbAbsences: 3,
+      Reussite: true,
+    },
+    {
+      id: 6,
+      nom: 'Smith',
+      prenom: 'Jane',
+      classe: 'B',
+      nbAbsences: 5,
+      Reussite: false,
+    },
+    {
+      id: 7,
+      nom: 'Doe',
+      prenom: 'John',
+      classe: 'A',
+      nbAbsences: 3,
+      Reussite: true,
+    },
+    {
+      id: 8,
+      nom: 'Smith',
+      prenom: 'Jane',
+      classe: 'B',
+      nbAbsences: 5,
+      Reussite: false,
+    },
+  ];
   ngOnInit(): void {
-      this.loadUsers();
+    this.loadUsers();
   }
   private loadUsers(): void {
-   this.studentService.getUserDetails().subscribe(
+    this.studentService.getUserDetails().subscribe(
       (resp: Student[]) => {
         console.log('API Response:', resp);
 
@@ -37,9 +100,9 @@ export class StudentsComponent implements OnInit {
     );
   }
 }
-  // ngOnInit(): void {
-  //   this.loadUsers();
-  // }
+// ngOnInit(): void {
+//   this.loadUsers();
+// }
 
 //   private loadUsers(): void {
 //     this.studentService.getUserDetails().subscribe(

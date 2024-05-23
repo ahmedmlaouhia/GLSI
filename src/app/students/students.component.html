@@ -1,14 +1,12 @@
-<button class="btn btn-outline btn-primary">Add Student</button>
-
+<div class="ml-auto w-fit mr-5 mb-5">
+  <button class="btn btn-outline btn-primary" routerLink="add">
+    Add Student
+  </button>
+</div>
 <div class="overflow-x-auto">
   <table class="table">
-    <!-- head -->
     <thead>
       <tr>
-        <th>
-          <label>
-          </label>
-        </th>
         <th>Id</th>
         <th>Nom</th>
         <th>Prenom</th>
@@ -18,23 +16,10 @@
         <th>Actions</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let user of userDetails">
-        <th>
-          <label>
-          </label>
-        </th>
+    <tbody *ngFor="let user of userDetails">
+      <tr>
         <td>{{ user.id }}</td>
-        <td>
-          <div class="avatar">
-            <div class="mask mask-squircle w-12 h-12">
-              <img
-                src="https://img.daisyui.com/tailwind-css-component-profile-2@56w.png"
-                alt="Avatar Tailwind CSS Component"
-              />
-            </div>
-          </div>
-        </td>
+
         <td>
           <h1 class="font-bold">{{ user.nom }}</h1>
         </td>
@@ -43,14 +28,27 @@
         </td>
         <td>{{ user.classe }}</td>
         <td>
-          <span class="status text-success">&bull;</span>
-          {{ user.reussite ? 'Yes' : 'No' }}
+          <span
+            class="status"
+            [ngClass]="{
+              'text-green-500': user.Reussite,
+              'text-red-600': !user.Reussite
+            }"
+          >
+            &bull;
+          </span>
+          {{ user.Reussite ? "Yes" : "No" }}
         </td>
         <td>{{ user.nbAbsences }}</td>
-        <th>
+        <td class="flex justify-start gap-3">
           <button class="btn btn-outline btn-secondary">Delete</button>
-          <button  class="btn btn-outline btn-accent">Edit</button>
-        </th>
+          <button
+            class="btn btn-outline btn-accent"
+            routerLink="edit/{{ user.id }}"
+          >
+            Edit
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>
