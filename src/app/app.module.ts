@@ -13,12 +13,15 @@ import { AddTeacherComponent } from './Teacher/add-teacher/add-teacher.component
 import { EditTeacherComponent } from './Teacher/edit-teacher/edit-teacher.component';
 import { TeachersComponent } from './Teacher/teachers/teachers.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule, routes } from './app.routes';
+import { LoginComponent } from './login/login.component';
+import { NavbarService } from './services/navbar.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { AppRoutingModule, routes } from './app.routes';
     EditTeacherComponent,
     AdministrationComponent,
     DashboardComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,7 @@ import { AppRoutingModule, routes } from './app.routes';
     AppRoutingModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [NavbarService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
