@@ -11,7 +11,7 @@
         <th>Nom</th>
         <th>Prenom</th>
         <th>Classe</th>
-        <th>Reussite</th>
+        <th>reussite</th>
         <th>Absences</th>
         <th>Actions</th>
       </tr>
@@ -31,13 +31,13 @@
           <span
             class="status"
             [ngClass]="{
-              'text-green-500': user.Reussite,
-              'text-red-600': !user.Reussite
+              'text-green-500': user.reussite,
+              'text-red-600': !user.reussite
             }"
           >
             &bull;
           </span>
-          {{ user.Reussite ? "Yes" : "No" }}
+          {{ user.reussite ? "Yes" : "No" }}
         </td>
         <td>{{ user.nbAbsences }}</td>
         <td class="flex justify-start gap-3">
