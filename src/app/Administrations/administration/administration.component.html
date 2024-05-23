@@ -1,0 +1,29 @@
+<div class="ml-auto w-fit mr-5 mb-5">
+    <button class="btn btn-outline btn-primary" routerLink="add">Add Administration</button>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Fonction</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let administration of staffDetails">
+        <tr>
+          <td>{{ administration.id }}</td>
+          <td><h1 class="font-bold">{{ administration.nom }}</h1></td>
+          <td><h1 class="font-bold">{{ administration.prenom }}</h1></td>
+          <td>{{ administration.fonction }}</td>
+          <td class="flex justify-start gap-3">
+            <button class="btn btn-outline btn-accent" routerLink="edit/{{ administration.id }}">Edit</button>
+            <button class="btn btn-outline btn-secondary" (click)="deleteStaff(administration.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

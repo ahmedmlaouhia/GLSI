@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="mx-auto w-[600px] flex flex-col gap-7">
+      <label class="input input-bordered flex items-center gap-2">
+        First name
+        <input type="text" class="grow" [(ngModel)]="administration.nom" id="nom" name="nom" />
+      </label>
+     
+      <label class="input input-bordered flex items-center gap-2">
+        Second name
+        <input type="text" class="grow" [(ngModel)]="administration.prenom" id="prenom" name="prenom" />
+      </label>
+      
+      <label class="input input-bordered flex items-center gap-2">
+        Function
+        <input type="text" class="grow" [(ngModel)]="administration.fonction" id="fonction" name="fonction" />
+      </label>
+      
+      <button class="btn btn-primary mx-auto !w-fit !px-32" type="submit">Save</button>
+    </div>
+  </form>
+  
