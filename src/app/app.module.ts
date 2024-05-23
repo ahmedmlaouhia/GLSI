@@ -12,6 +12,7 @@ import { EditAdministrationComponent } from './edit-administration/edit-administ
 import { AddTeacherComponent } from './add-teacher/add-teacher.component';
 import { EditTeacherComponent } from './edit-teacher/edit-teacher.component';
 import { TeachersComponent } from './teachers/teachers.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
@@ -33,6 +34,7 @@ import { AppRoutingModule, routes } from './app.routes';
     EditStudentComponent,
     EditTeacherComponent,
     AdministrationComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
