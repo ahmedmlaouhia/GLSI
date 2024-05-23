@@ -3,7 +3,6 @@ import { StudentsService } from '../services/students.service';
 import { Router } from '@angular/router';
 import { Student } from '../models/Student';
 import { HttpErrorResponse } from '@angular/common/http';
-import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-students',
@@ -15,7 +14,73 @@ export class StudentsComponent {
     private studentService: StudentsService,
     private router: Router
   ) {}
-  userDetails: Student[] = [];
+
+  userDetails: Student[] = [
+    {
+      id: 1,
+      nom: 'Doe',
+      prenom: 'John',
+      classe: 'A',
+      nbAbsences: 3,
+      Reussite: true,
+    },
+    {
+      id: 2,
+      nom: 'Smith',
+      prenom: 'Jane',
+      classe: 'B',
+      nbAbsences: 5,
+      Reussite: false,
+    },
+    {
+      id: 3,
+      nom: 'Doe',
+      prenom: 'John',
+      classe: 'A',
+      nbAbsences: 3,
+      Reussite: true,
+    },
+    {
+      id: 4,
+      nom: 'Smith',
+      prenom: 'Jane',
+      classe: 'B',
+      nbAbsences: 5,
+      Reussite: false,
+    },
+    {
+      id: 5,
+      nom: 'Doe',
+      prenom: 'John',
+      classe: 'A',
+      nbAbsences: 3,
+      Reussite: true,
+    },
+    {
+      id: 6,
+      nom: 'Smith',
+      prenom: 'Jane',
+      classe: 'B',
+      nbAbsences: 5,
+      Reussite: false,
+    },
+    {
+      id: 7,
+      nom: 'Doe',
+      prenom: 'John',
+      classe: 'A',
+      nbAbsences: 3,
+      Reussite: true,
+    },
+    {
+      id: 8,
+      nom: 'Smith',
+      prenom: 'Jane',
+      classe: 'B',
+      nbAbsences: 5,
+      Reussite: false,
+    },
+  ];
   ngOnInit(): void {
     this.loadUsers();
   }
