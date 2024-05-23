@@ -4,5 +4,6 @@ export interface Student {
   prenom: string;
   classe: string;
   nbAbsences: any;
-  Reussite: boolean;
+  reussite: boolean;
 }
+

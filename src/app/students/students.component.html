@@ -9,17 +9,17 @@
           <label>
           </label>
         </th>
-        <th>Id</th> 
+        <th>Id</th>
         <th>Nom</th>
         <th>Prenom</th>
         <th>Classe</th>
         <th>Reussite</th>
-        <th>Abscences</th>
+        <th>Absences</th>
         <th>Actions</th>
       </tr>
     </thead>
-    <tbody *ngFor="let user of userDetails">
-      <tr>
+    <tbody>
+      <tr *ngFor="let user of userDetails">
         <th>
           <label>
           </label>
@@ -44,12 +44,12 @@
         <td>{{ user.classe }}</td>
         <td>
           <span class="status text-success">&bull;</span>
-          {{ user.Reussite }}
+          {{ user.reussite ? 'Yes' : 'No' }}
         </td>
         <td>{{ user.nbAbsences }}</td>
         <th>
           <button class="btn btn-outline btn-secondary">Delete</button>
-          <button class="btn btn-outline btn-accent">Edit</button>
+          <button  class="btn btn-outline btn-accent">Edit</button>
         </th>
       </tr>
     </tbody>

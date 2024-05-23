@@ -1,29 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StudentsService } from '../services/students.service';
 import { Router } from '@angular/router';
 import { Student } from '../models/Student';
-import { HttpErrorResponse } from '@angular/common/http';
-import { NgFor } from '@angular/common';
+import { HttpClientModule, HttpErrorResponse } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-students',
   standalone: true,
-  imports: [NgFor],
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './students.component.html',
-  styleUrl: './students.component.css',
+  styleUrls: ['./students.component.css'],
 })
-export class StudentsComponent {
+export class StudentsComponent implements OnInit {
+  userDetails: Student[] = [];
+
   constructor(
     private studentService: StudentsService,
-    private router: Router
+    public router: Router
   ) {}
-  userDetails: Student[] = [];
   ngOnInit(): void {
-    this.loadUsers();
+      this.loadUsers();
   }
-  loadUsers() {
-    this.studentService.getUserDetails().subscribe(
-      (resp: any) => {
+  private loadUsers(): void {
+   this.studentService.getUserDetails().subscribe(
+      (resp: Student[]) => {
         console.log('API Response:', resp);
 
         if (resp && Array.isArray(resp)) {
@@ -33,23 +34,44 @@ export class StudentsComponent {
         }
       },
       (error: HttpErrorResponse) => {
-        console.log(error);
-      }
-    );
-  }
-  editUser(userId: number): void {
-    this.router.navigate(['/edit', userId]);
-  }
-
-  deleteUser(userId: number): void {
-    this.studentService.deleteUser(userId).subscribe(
-      () => {
-        console.log('User deleted successfully');
-        this.loadUsers();
-      },
-      (error: HttpErrorResponse) => {
-        console.error('Error deleting user:', error);
+        console.error('Error fetching user details:', error.message);
       }
     );
   }
 }
+  // ngOnInit(): void {
+  //   this.loadUsers();
+  // }
+
+//   private loadUsers(): void {
+//     this.studentService.getUserDetails().subscribe(
+//       (resp: Student[]) => {
+//         console.log('API Response:', resp);
+//         if (resp && Array.isArray(resp)) {
+//           this.userDetails = resp;
+//         } else {
+//           console.error('Invalid response structure. Expected an array.');
+//         }
+//       },
+//       (error: HttpErrorResponse) => {
+//         console.error('Error fetching user details:', error.message);
+//       }
+//     );
+//   }
+
+//   editUser(userId: number): void {
+//     this.router.navigate(['/edit', userId]);
+//   }
+
+//   deleteUser(userId: number): void {
+//     this.studentService.deleteUser(userId).subscribe(
+//       () => {
+//         console.log('User deleted successfully');
+//         this.loadUsers();
+//       },
+//       (error: HttpErrorResponse) => {
+//         console.error('Error deleting user:', error.message);
+//       }
+//     );
+//   }
+// }
