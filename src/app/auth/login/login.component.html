@@ -6,75 +6,67 @@
 </head>
 <body class="bg-white min-h-screen flex items-center justify-center">
   <div class="flex items-center xl:p-10">
-    <form
-      class="flex flex-col w-full h-full pb-6 text-center bg-white rounded-3xl"
-    >
+    <form class="flex flex-col w-full h-full text-center rounded-3xl gap-2">
       <h3 class="mb-10 text-4xl font-extrabold text-dark-grey-900">Log In</h3>
-      <a
-        class="flex items-center justify-center w-full py-4 mb-6 text-sm font-medium transition duration-300 rounded-2xl text-grey-900 bg-grey-300 hover:bg-grey-400 focus:ring-4 focus:ring-grey-300"
+      <button
+        class="btn btn-ghost flex justify-center gap-2 py-2 h-fit flex-wrap"
       >
         <img
-          class="h-5 mr-2"
+          class="h-5"
           src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-google.png"
           alt=""
         />
         Sign in with Google
-      </a>
+      </button>
+
       <div class="flex items-center mb-3">
         <hr class="h-0 border-b border-solid border-grey-500 grow" />
         <p class="mx-4 text-grey-600">or</p>
         <hr class="h-0 border-b border-solid border-grey-500 grow" />
       </div>
       <label for="email" class="mb-2 text-sm text-start text-grey-900"
-        >Email*</label
+        >Email *</label
       >
       <input
         id="email"
         type="email"
-        placeholder="mail@loopple.com"
-        class="flex items-center w-full px-5 py-4 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-2xl"
+        placeholder=" Enter your email"
+        class="input w-full rounded-2xl !outline-transparent !ring-transparent !border-transparent"
       />
+
       <label for="password" class="mb-2 text-sm text-start text-grey-900"
-        >Password*</label
+        >Password *</label
       >
       <input
         id="password"
         type="password"
-        placeholder="Enter a password"
-        class="flex items-center w-full px-5 py-4 mb-5 mr-2 text-sm font-medium outline-none focus:bg-grey-400 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-2xl"
+        placeholder=" Enter your password"
+        class="input w-full rounded-2xl !outline-transparent !ring-transparent !border-transparent"
       />
-      <div class="flex flex-row justify-between mb-8">
+      <div class="flex justify-between mb-4 mt-2">
         <label
           class="relative inline-flex items-center mr-3 cursor-pointer select-none"
         >
-          <input type="checkbox" checked value="" class="sr-only peer" />
-          <div
-            class="w-5 h-5 bg-white border-2 rounded-sm border-grey-500 peer peer-checked:border-0 peer-checked:bg-purple-blue-500"
-          >
-            <img
-              class=""
-              src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/icons/check.png"
-              alt="tick"
-            />
-          </div>
+          <input
+            type="checkbox"
+            class="checkbox checkbox-primary h-[21px] w-[21px] rounded-full"
+          />
           <span class="ml-3 text-sm font-normal text-grey-900"
             >Keep me logged in</span
           >
         </label>
         <a
-          href="javascript:void(0)"
-          class="mr-4 text-sm font-medium text-purple-blue-500"
+          routerLink="/auth/forgot-password"
+          class="text-sm font-medium text-primary py-2 px-3 rounded-full hover:bg-gray-200 duration-200"
           >Forget password?</a
         >
       </div>
-      <button
-        class="w-full px-6 py-5 mb-5 text-sm font-bold leading-none text-white transition duration-300 md:w-96 rounded-2xl hover:bg-purple-blue-600 focus:ring-4 focus:ring-purple-blue-100 bg-purple-blue-500"
-      >
+      <button class="btn btn-primary w-full md:w-96 rounded-full mb-5">
         Sign In
       </button>
       <p class="text-sm leading-relaxed text-grey-900">
         Not registered yet?
-        <a href="javascript:void(0)" class="font-bold text-grey-700"
+        <a routerLink="auth/signup" class="font-bold text-grey-700"
           >Create an Account</a
         >
       </p>
