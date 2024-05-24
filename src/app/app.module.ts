@@ -20,7 +20,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule, routes } from './app.routes';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { NavbarService } from './services/navbar.service';
 
 @NgModule({

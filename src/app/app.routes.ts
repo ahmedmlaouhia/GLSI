@@ -11,10 +11,10 @@ import { AddTeacherComponent } from './Teacher/add-teacher/add-teacher.component
 import { EditTeacherComponent } from './Teacher/edit-teacher/edit-teacher.component';
 import { TeachersComponent } from './Teacher/teachers/teachers.component';
 import { NgModule } from '@angular/core';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 
 export const routes: Routes = [
-  { path: 'login', component:LoginComponent},
+  { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'students', component: StudentsComponent },
   { path: 'students/add', component: AddStudentComponent },
