@@ -4,13 +4,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui"),
-  require('flowbite/plugin')({
-    charts: true,
-}),
-
-
-
-  ],
-  
+  plugins: [require("daisyui")],
 };

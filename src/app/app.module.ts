@@ -22,7 +22,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule, routes } from './app.routes';
 import { LoginComponent } from './auth/login/login.component';
 import { NavbarService } from './services/navbar.service';
-import { NgxApexchartsModule } from 'ngx-apexcharts';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,7 @@ import { NgxApexchartsModule } from 'ngx-apexcharts';
     RouterOutlet,
     HttpClientModule,
     AppRoutingModule,
-    NgxApexchartsModule,
+    NgApexchartsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [NavbarService],
