@@ -12,7 +12,6 @@ import { EditAdministrationComponent } from './Administrations/edit-administrati
 import { AddTeacherComponent } from './Teacher/add-teacher/add-teacher.component';
 import { EditTeacherComponent } from './Teacher/edit-teacher/edit-teacher.component';
 import { TeachersComponent } from './Teacher/teachers/teachers.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
@@ -38,7 +37,6 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     EditStudentComponent,
     EditTeacherComponent,
     AdministrationComponent,
-    DashboardComponent,
     LoginComponent,
   ],
   imports: [
