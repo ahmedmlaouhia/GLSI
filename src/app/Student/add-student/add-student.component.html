@@ -1,56 +1,62 @@
+<h1 class="text-4xl text-center font-bold text-primary mb-16">Add Student</h1>
 <form (ngSubmit)="onSubmit()">
-
-<div class="mx-auto w-[600px] flex flex-col gap-7 ">
-
+  <div class="mx-auto w-[600px] flex flex-col gap-7">
     <label class="input input-bordered flex items-center gap-2">
-        First name
-        <input type="text" class="grow"  
+      First name
+      <input
+        type="text"
+        class="grow"
         [(ngModel)]="student.nom"
         id="nom"
         name="nom"
-        />
-      </label>
-   
-      <label class="input input-bordered flex items-center gap-2">
-        Second name
-        <input type="text" class="grow" 
+      />
+    </label>
+
+    <label class="input input-bordered flex items-center gap-2">
+      Second name
+      <input
+        type="text"
+        class="grow"
         [(ngModel)]="student.prenom"
         id="prenom"
         name="prenom"
-        />
-      </label>
-      <label class="input input-bordered flex items-center gap-2">
-        Class
-        <input type="text" class="grow" 
+      />
+    </label>
+    <label class="input input-bordered flex items-center gap-2">
+      Class
+      <input
+        type="text"
+        class="grow"
         [(ngModel)]="student.classe"
         id="classe"
         name="classe"
-        />
-      </label>
-      
-        <label class="input input-bordered flex items-center gap-2">
-            Absences
-            <input type="text" class="grow" 
-            [(ngModel)]="student.nbAbsences"
-            id="nbAbsences"
-            name="nbAbsences"
+      />
+    </label>
 
-            />
-            </label>
-            
-            <label class=" flex items-center gap-2">
-                Success
-                <input type="checkbox" class="toggle toggle-success"  
-                [(ngModel)]="student.reussite"
-                id="reussite"
-                name="reussite"
+    <label class="input input-bordered flex items-center gap-2">
+      Absences
+      <input
+        type="text"
+        class="grow"
+        [(ngModel)]="student.nbAbsences"
+        id="nbAbsences"
+        name="nbAbsences"
+      />
+    </label>
 
-                />
-        
-              </label>
-    
-   
-      <button class="btn btn-primary mx-auto !w-fit !px-32" type="submit" >Save</button>
+    <label class="flex items-center gap-2">
+      Success
+      <input
+        type="checkbox"
+        class="toggle toggle-success"
+        [(ngModel)]="student.reussite"
+        id="reussite"
+        name="reussite"
+      />
+    </label>
 
-</div>
+    <button class="btn btn-primary mx-auto !w-fit !px-32" type="submit">
+      Save
+    </button>
+  </div>
 </form>

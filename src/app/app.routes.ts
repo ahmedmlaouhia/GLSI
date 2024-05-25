@@ -15,7 +15,6 @@ import { LoginComponent } from './auth/login/login.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
   { path: 'students', component: StudentsComponent },
   { path: 'students/add', component: AddStudentComponent },
   { path: 'students/edit/:id', component: EditStudentComponent },
@@ -25,6 +24,7 @@ export const routes: Routes = [
   { path: 'teachers', component: TeachersComponent },
   { path: 'teachers/add', component: AddTeacherComponent },
   { path: 'teachers/edit/:id', component: EditTeacherComponent },
+  { path: 'dashboard', component: HomeComponent },
   { path: '**', redirectTo: 'home' },
 ];
 
