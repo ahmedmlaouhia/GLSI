@@ -3,10 +3,10 @@
     Add Student
   </button>
 </div>
-<div class="overflow-x-auto">
-  <table class="table">
+<div class="overflow-x-auto bg-[#2a323c] px-5 py-3 rounded-2xl">
+  <table class="table text-center">
     <thead>
-      <tr>
+      <tr class="text-gray-300 text-sm">
         <th>Id</th>
         <th>Nom</th>
         <th>Prenom</th>
@@ -40,18 +40,19 @@
           {{ user.reussite ? "Yes" : "No" }}
         </td>
         <td>{{ user.nbAbsences }}</td>
-        <td class="flex justify-start gap-3">
+        <td class="flex justify-center gap-3">
           <button
-          class="btn btn-outline btn-accent"
-          routerLink="edit/{{ user.id }}"
-        >
-          Edit
-        </button>
-          <button class="btn btn-outline btn-secondary"
-          (click)="deleteUser(user.id)"
-
-          >Delete</button>
-         
+            class="btn btn-outline btn-accent"
+            routerLink="edit/{{ user.id }}"
+          >
+            Edit
+          </button>
+          <button
+            class="btn btn-outline btn-secondary"
+            (click)="deleteUser(user.id)"
+          >
+            Delete
+          </button>
         </td>
       </tr>
     </tbody>

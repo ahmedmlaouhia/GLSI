@@ -1,7 +1,6 @@
 <div class="drawer mb-16 mt-5">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
-    <!-- Navbar -->
     <div class="w-full navbar bg-base-300 rounded-2xl">
       <div class="flex-none lg:hidden">
         <label
@@ -25,23 +24,43 @@
         </label>
       </div>
       <div class="flex-1 px-2 mx-2">GLSI</div>
-      <div class="flex-none hidden lg:flex items-center space-x-5">
+      <div class="flex-none hidden lg:flex items-center space-x-5 font-medium">
         <ul class="menu menu-horizontal gap-5">
           <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-          <li><a routerLink="/students" routerLinkActive="active">Students</a></li>
-          <li><a routerLink="/administration" routerLinkActive="active">Administration</a></li>
-          <li><a routerLink="/teachers" routerLinkActive="active">Teachers</a></li>
+          <li>
+            <a routerLink="/students" routerLinkActive="active">Students</a>
+          </li>
+          <li>
+            <a routerLink="/administration" routerLinkActive="active"
+              >Administration</a
+            >
+          </li>
+          <li>
+            <a routerLink="/teachers" routerLinkActive="active">Teachers</a>
+          </li>
+          <li>
+            <a routerLink="/login" routerLinkActive="active"> Login </a>
+          </li>
         </ul>
-        <button class="btn btn-ghost btn-primary" routerLink="/login" routerLinkActive="active">Login</button> <!-- Moved the button inside the flex container -->
+
+        <!-- Moved the button inside the flex container -->
       </div>
     </div>
   </div>
   <div class="drawer-side">
-    <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+    <label
+      for="my-drawer-3"
+      aria-label="close sidebar"
+      class="drawer-overlay"
+    ></label>
     <ul class="menu p-4 w-80 min-h-full bg-base-200 gap-5">
       <li><a routerLink="home" routerLinkActive="active">Home</a></li>
       <li><a routerLink="students" routerLinkActive="active">Students</a></li>
-      <li><a routerLink="administration" routerLinkActive="active">Administration</a></li>
+      <li>
+        <a routerLink="administration" routerLinkActive="active"
+          >Administration</a
+        >
+      </li>
       <li><a routerLink="teachers" routerLinkActive="active">Teachers</a></li>
     </ul>
   </div>

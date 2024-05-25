@@ -4,10 +4,10 @@
     href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/motion-tailwind.css"
   />
 </head>
-<body class="bg-white min-h-screen flex items-center justify-center">
+<body class="bg-[#1d232a] min-h-screen flex items-center justify-center">
   <div class="flex items-center xl:p-10">
     <form class="flex flex-col w-full h-full text-center rounded-3xl gap-2">
-      <h3 class="mb-10 text-4xl font-extrabold text-dark-grey-900">Log In</h3>
+      <h3 class="mb-10 text-4xl font-extrabold text-primary">Log In</h3>
       <button
         class="btn btn-ghost flex justify-center gap-2 py-2 h-fit flex-wrap"
       >
@@ -24,7 +24,7 @@
         <p class="mx-4 text-grey-600">or</p>
         <hr class="h-0 border-b border-solid border-grey-500 grow" />
       </div>
-      <label for="email" class="mb-2 text-sm text-start text-grey-900"
+      <label for="email" class="mb-2 text-sm text-start text-white"
         >Email *</label
       >
       <input
@@ -34,7 +34,7 @@
         class="input w-full rounded-2xl !outline-transparent !ring-transparent !border-transparent"
       />
 
-      <label for="password" class="mb-2 text-sm text-start text-grey-900"
+      <label for="password" class="mb-2 text-sm text-start text-white"
         >Password *</label
       >
       <input
@@ -51,20 +51,20 @@
             type="checkbox"
             class="checkbox checkbox-primary h-[21px] w-[21px] rounded-full"
           />
-          <span class="ml-3 text-sm font-normal text-grey-900"
+          <span class="ml-3 text-sm font-normal text-white"
             >Keep me logged in</span
           >
         </label>
         <a
           routerLink="/auth/forgot-password"
-          class="text-sm font-medium text-primary py-2 px-3 rounded-full hover:bg-gray-200 duration-200"
+          class="text-sm font-medium text-primary py-2 px-3 rounded-full hover:bg-gray-800 duration-200"
           >Forget password?</a
         >
       </div>
       <button class="btn btn-primary w-full md:w-96 rounded-full mb-5">
         Sign In
       </button>
-      <p class="text-sm leading-relaxed text-grey-900">
+      <p class="text-sm leading-relaxed text-white">
         Not registered yet?
         <a routerLink="auth/signup" class="font-bold text-grey-700"
           >Create an Account</a
