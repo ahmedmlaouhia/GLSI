@@ -1,41 +1,74 @@
-
 <div class="ml-auto w-fit mr-5 mb-5">
-    <button class="btn btn-outline btn-primary" routerLink="add">Add Administration</button>
-  </div><div class="flex justify-center">
-    <div class="pl-32 flex-auto max-h-fit">
-      <div class="overflow-x-auto">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Nom</th>
-              <th>Prenom</th>
-              <th>Fonction</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody *ngFor="let administration of staffDetails">
-            <tr>
-              <td>{{ administration.id }}</td>
-              <td><h1 class="font-bold">{{ administration.nom }}</h1></td>
-              <td><h1 class="font-bold">{{ administration.prenom }}</h1></td>
-              <td>{{ administration.fonction }}</td>
-              <td class="flex justify-start gap-3">
-           <a class="btn btn-outline btn-accent" routerLink="edit/{{ administration.id }}">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3l6 6-9 9-6-6 9-9zM10 14l4 4m0 0-4 4m4-4L6 8"/>
+  <button class="btn btn-outline btn-primary" routerLink="add">
+    Add Administration
+  </button>
+</div>
+<div class="flex justify-center">
+  <div class="pl-32 flex-auto max-h-fit">
+    <div class="overflow-x-auto bg-[#2a323c] px-5 py-3 rounded-2xl">
+      <table class="table">
+        <thead>
+          <tr class="text-gray-300 text-sm">
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Fonction</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let administration of staffDetails">
+          <tr>
+            <td>{{ administration.id }}</td>
+            <td>
+              <h1 class="font-bold">{{ administration.nom }}</h1>
+            </td>
+            <td>
+              <h1 class="font-bold">{{ administration.prenom }}</h1>
+            </td>
+            <td>{{ administration.fonction }}</td>
+            <td class="flex justify-start gap-3">
+              <a
+                class="btn btn-outline btn-accent"
+                routerLink="edit/{{ administration.id }}"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 3l6 6-9 9-6-6 9-9zM10 14l4 4m0 0-4 4m4-4L6 8"
+                  />
                 </svg>
               </a>
-                <button class="btn btn-outline btn-error" (click)="deleteStaff(administration.id)">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                  </svg>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              <button
+                class="btn btn-outline btn-error"
+                (click)="deleteStaff(administration.id)"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  
+</div>

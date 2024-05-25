@@ -10,40 +10,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./students.component.css'],
 })
 export class StudentsComponent implements OnInit {
-  userDetails: Student[] = [
-    {
-      id: 1,
-      nom: 'John',
-      prenom: 'Doe',
-      classe: '6th',
-      nbAbsences: 3,
-      reussite: true,
-    },
-    {
-      id: 2,
-      nom: 'Jane',
-      prenom: 'Doe',
-      classe: '6th',
-      nbAbsences: 0,
-      reussite: true,
-    },
-    {
-      id: 3,
-      nom: 'Alice',
-      prenom: 'Smith',
-      classe: '6th',
-      nbAbsences: 2,
-      reussite: true,
-    },
-    {
-      id: 4,
-      nom: 'Bob',
-      prenom: 'Smith',
-      classe: '6th',
-      nbAbsences: 1,
-      reussite: true,
-    },
-  ];
+  userDetails: Student[] = [];
 
   constructor(private studentService: StudentsService, public router: Router) {}
 
